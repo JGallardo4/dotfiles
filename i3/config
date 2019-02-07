@@ -44,34 +44,39 @@ set $fileManagerClass "Nemo"
 set $emailClient claws-mail
 set $emailClientClass ClawsMail
 
-set $gYellow #BD93F9
+# Colors
+## Base16 Tomorrow Night
+## Author: Chris Kempson (http://chriskempson.com)
+##
+## You can use these variables anywhere in the i3 configuration file.
 
-set_from_resource $darkblack   color0  #000000
-set_from_resource $black       color8  #000000
-set_from_resource $darkred     color1  #000000
-set_from_resource $red         color9  #000000
-set_from_resource $darkgreen   color2  #000000
-set_from_resource $green       color10  #000000
-set_from_resource $darkyellow  color3  #000000
-set_from_resource $yellow      color11 #000000
-set_from_resource $darkblue    color4  #000000
-set_from_resource $blue        color12 #000000
-set_from_resource $darkmagenta color5  #000000
-set_from_resource $magenta     color13 #000000
-set_from_resource $darkcyan    color6  #000000
-set_from_resource $cyan        color14 #000000
-set_from_resource $darkwhite   color7  #000000
-set_from_resource $white       color15 #000000
+set $base00 #2d2d2d
+set $base01 #393939
+set $base02 #515151
+set $base03 #747369
+set $base04 #a09f93
+set $base05 #d3d0c8
+set $base06 #e8e6df
+set $base07 #f2f0ec
+set $base08 #f2777a
+set $base09 #f99157
+set $base0A #ffcc66
+set $base0B #99cc99
+set $base0C #66cccc
+set $base0D #f99157
+set $base0E #cc99cc
+set $base0F #d27b53
 
 ##########
 # Colors #
 ##########
 
 # CLASS                 BORDER          BACKGROUND	TEXT            INDICATOR	CHILD_BORDER
-client.focused          #F1FA8C	        $darkblack	$gYellow 	$gYellow	#F1FA8C	
-client.unfocused        $darkblack 	$black 		$white 		$darkblack
-client.focused_inactive #F1FA8C 	$black     	$white 		$darkblack
-client.urgent           $red       	$red       	$white 		$red
+client.focused          $base05	        $base0D		$base00 	$base0D		$base0D	
+client.unfocused        $base01 	$base00		$base05		$base01		$base01
+client.focused_inactive $base01 	$base01     	$base05		$base03		$base01
+client.urgent           $base08		$base08       	$base00		$base08		$base08
+client.background	$base07
 
 ################
 # Key Bindings #
@@ -265,15 +270,14 @@ bar {
 	binding_mode_indicator yes
 	
 	colors {
-		background #1E1F28
-		statusline $gYellow
-		separator  $gYellow
+		background $base00
+		statusline $base0A
+		separator  $base04
 
-				   #border  backgr.  text
-        	focused_workspace  #1E1F28  #1E1F28  $gYellow
-		urgent_workspace   $gYellow $gYellow $darkblack
-		inactive_workspace #1E1F28  #1E1F28  #BBBBBB
-
+		# State			Border	BG	Text
+        	focused_workspace  	$base05 $base0B	$base00
+		urgent_workspace   	$base08 $base08 $base00
+		inactive_workspace 	$base03 $base01 $base05
 	}
 }
 

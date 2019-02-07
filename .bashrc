@@ -128,17 +128,13 @@ alias tmc-beans='/home/juan-i3/tmcbeans/bin/tmcbeans' #Run a package of Netbeans
 
 # Config files #
 
-alias config.bashrc='nvim /home/juan-i3/.bashrc'                          #edit .bashrc
-alias config.xinitrc='nvim /home/juan/.xinitrc'                           #edit .xinitrc
-alias config.vimrc='nvim /home/juan-i3/.config/nvim/init.vim'             #edit vimrc
-alias config.i3='nvim /home/juan-i3/.config/i3/config'                    #edit i3-gaps config file
-alias config.i3bar='nvim /home/juan-i3/.config/i3status/config'           #edit i3-status
+alias config.bashrc='nvim ~/.dotfiles/.bashrc'			#edit .bashrc
+alias config.xinitrc='nvim ~/.dotfiles/.xinitrc'		#edit .xinitrc
+alias config.vimrc='nvim ~/.dotfiles/init.vim'			#edit vimrc
+alias config.i3='nvim ~/.dotfiles/i3/config'			#edit i3-gaps config file
+alias config.i3bar='nvim ~/.dotfiles/i3/i3status/config'	#edit i3-status
 
-alias config.firefox='nvim /home/juan-i3/.mozilla/firefox/jp4uzo71.default-1540867243010/chrome/userChrome.css'	# Edit Firefox's appearance
-
-# Backup dotfiles with git
-alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-##########################################
+#########################################
 
 xhost +local:root > /dev/null 2>&1
 
