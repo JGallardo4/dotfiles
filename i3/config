@@ -259,7 +259,8 @@ assign [class="Nicotine"] $ws10
 
 # Start i3bar to display a workspace bar (plus the system information i3status finds out, if available)
 bar {
-# i3bar_command i3bar -t
+	# i3bar_command i3bar -t
+	font pango:Iosevka Term SS04 Medium 12
 	height 27
 	bindsym button4 nop
 	bindsym button5 nop

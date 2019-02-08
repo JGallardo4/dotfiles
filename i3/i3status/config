@@ -43,9 +43,7 @@ tztime local {
 	# strftime(3) 
 	# Format can be found here:
 	# http://man7.org/linux/man-pages/man3/strftime.3.html
-	
-	
-	# Some of the available /conversion specifications/:
+	# Some of the available conversion specifications:
 	# %A = String day of the week
 	# %m = Numeric month
 	# %B = String month
@@ -56,5 +54,5 @@ tztime local {
 	# %M = minutes
 	# %a = Short string day of the week
 
-	format = " -- %a, %b %d %Y [%H:%M] -- %m/12"
+	format = " -- %a, %b %d %Y [%H:%M] -- %d/%m/%y  "
 }

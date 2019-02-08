@@ -15,7 +15,7 @@ set number
 syntax on
 
 " Enable mouse support.
-set mouse=a
+set mouse=c
 
 " Change movement keys to make more sense in Colemak layout.
 noremap h k
