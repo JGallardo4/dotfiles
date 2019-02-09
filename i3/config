@@ -38,6 +38,9 @@ hide_edge_borders smart
 # Variables #
 #############
 
+set $browser firefox
+set $browserClass Firefox
+
 set $fileManager nemo
 set $fileManagerClass "Nemo"
 
@@ -48,6 +51,9 @@ set $emailClient thunderbird
 set $emailClientClass Thunderbird
 
 set $taskManager xfce4-taskmanager
+
+set $terminal gnome-terminal
+set $terminalClass "Gnome Terminal"
 
 # Colors
 ## Base16 Tomorrow Night
@@ -88,7 +94,7 @@ client.background	$base07
 ################
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec $terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -180,23 +186,23 @@ bindsym $mod+shift+x exec betterlockscreen -l blur
 ### Program shortcuts ###
 #########################
 
-bindsym $mod+F1 exec --no-startup-id firefox
+bindsym $mod+F1 exec --no-startup-id $browser
 bindsym $mod+F2 exec --no-startup-id $musicPlayer
 bindsym $mod+F3 exec --no-startup-id transmission-gtk  
 bindsym $mod+F11 exec --no-startup-id pamac-manager
 bindsym $mod+XF86Calculator exec --no-startup-id galculator 
 bindsym $mod+Print exec --no-startup-id xfce4-screenshooter
 bindsym $mod+F4 exec --no-startup-id nvpy
-bindsym $mod+F5 exec --no-startup-id nemo
+bindsym $mod+F5 exec --no-startup-id $fileManager
 bindsym $mod+F7 exec --no-startup-id $emailClient
 bindsym $mod+Pause exec --no-startup-id $taskManager
 
 #########################
 
 # Focus/No_focus on new windows when opened
-for_window [class="Firefox"] focus
+for_window [class=$browserClass] focus
 for_window [class="Transmission-gtk"] focus_on_window_activation none 
-for_window [class="Clementine"] focus_on_window_activation none 
+for_window [class="musicPlayer"] focus_on_window_activation none 
 
 # Other individual window configurations
 for_window [class="Idea"] tiling enable
@@ -252,9 +258,9 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Assigning apps to workspaces
-assign [class="Clementine"] $ws10
+assign [class="musicPlayer"] $ws10
 assign [class="Idea"] $ws2
-assign [class="Firefox"] $ws1
+assign [class=$browserClass] $ws1
 assign [class="Transmission-gtk"] $ws10
 assign [class="Nicotine"] $ws10
 #assign [class=$fileManagerClass] $ws9
@@ -385,6 +391,9 @@ exec --no-startup-id pamac-tray
 # Set keyboard to International U.S. keyboard with Alt-r variant
 #setxkbmap rules evdev -model evdev -layout us -variant altgr-intl
 
+# Start a terminal in the scratchpad
+for_window [instance="_scratchpad"] move scratchpad 
+exec --no-startup-id $terminal -name _scratchpad
 
 ###################
 # Multimedia Keys #
@@ -407,6 +416,3 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 #bindsym XF86AudioPlay exec playerctl play-pause 
 #bindsym XF86AudioNext exec playerctl next
 #bindsym XF86AudioPrev exec playerctl previous
-
-
-
