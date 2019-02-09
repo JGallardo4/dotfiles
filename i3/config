@@ -39,16 +39,16 @@ hide_edge_borders smart
 #############
 
 set $browser firefox
-set $browserClass Firefox
+set $browserClass "Firefox"
 
 set $fileManager nemo
 set $fileManagerClass "Nemo"
 
-set $musicPlayer Quod Libet
+set $musicPlayer quodlibet
 set $musicPlayerClass "Quod Libet"
 
 set $emailClient thunderbird
-set $emailClientClass Thunderbird
+set $emailClientClass "Thunderbird"
 
 set $taskManager xfce4-taskmanager
 
