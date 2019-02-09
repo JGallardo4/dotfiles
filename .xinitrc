@@ -18,6 +18,5 @@ setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
 exec i3
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
-# Set a nice backdrop
-hsetroot -fill /home/juan/Pictures/Wallpapers/Rotation/XWFcjho.jpg &
-xset r rate 660 25
+# Set wallpaper
+betterlockscreen

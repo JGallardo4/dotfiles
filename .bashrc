@@ -44,7 +44,6 @@ shopt -s checkwinsize
 #figlet "Welcome, " $USER;
 #echo -e ""
 echo -ne "Today is "; date
-echo -ne "Up time:";uptime
 echo "";
 
 # Change the window title of X terminals

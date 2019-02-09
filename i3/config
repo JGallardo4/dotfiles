@@ -41,8 +41,13 @@ hide_edge_borders smart
 set $fileManager nemo
 set $fileManagerClass "Nemo"
 
-set $emailClient claws-mail
-set $emailClientClass ClawsMail
+set $musicPlayer Quod Libet
+set $musicPlayerClass "Quod Libet"
+
+set $emailClient thunderbird
+set $emailClientClass Thunderbird
+
+set $taskManager xfce4-taskmanager
 
 # Colors
 ## Base16 Tomorrow Night
@@ -67,9 +72,9 @@ set $base0D #f99157
 set $base0E #cc99cc
 set $base0F #d27b53
 
-##########
-# Colors #
-##########
+#################
+# Client Colors #
+#################
 
 # CLASS                 BORDER          BACKGROUND	TEXT            INDICATOR	CHILD_BORDER
 client.focused          $base05	        $base0D		$base00 	$base0D		$base0D	
@@ -169,21 +174,22 @@ bindsym $mod+Shift+e exec --no-startup-id i3-msg exit, mode "default"
 bindsym $mod+u exec dm-tool switch-to-greeter
 
 # Shortcut for i3lock
-bindsym $mod+shift+l exec --no-startup-id i3lock -i /home/juan/Pictures/Wallpapers/Rotation/AutumnForest.png
+bindsym $mod+shift+x exec betterlockscreen -l blur
 
 #########################
 ### Program shortcuts ###
 #########################
 
 bindsym $mod+F1 exec --no-startup-id firefox
-bindsym $mod+F2 exec --no-startup-id clementine
+bindsym $mod+F2 exec --no-startup-id $musicPlayer
 bindsym $mod+F3 exec --no-startup-id transmission-gtk  
 bindsym $mod+F11 exec --no-startup-id pamac-manager
 bindsym $mod+XF86Calculator exec --no-startup-id galculator 
 bindsym $mod+Print exec --no-startup-id xfce4-screenshooter
 bindsym $mod+F4 exec --no-startup-id nvpy
 bindsym $mod+F5 exec --no-startup-id nemo
-bindsym $mod+F7 exec --no-startup-id thunderbird
+bindsym $mod+F7 exec --no-startup-id $emailClient
+bindsym $mod+Pause exec --no-startup-id $taskManager
 
 #########################
 
@@ -350,15 +356,15 @@ mode "$mode_gaps_outer" {
 # Autostart #
 #############
 
+# Cache an image to use as lockscreen and wallpaper
+# doesnt seem to be working! exec --no-startup-id betterlockscreen -u ~/.Pictures/Wallpapers
+
 # Pamac authentification stuff
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
 
 # Turn numlock off
 # No numberpad atm! 
 # exec_always --no-startup-id numlockx on
-
-# Set wallpaper
-exec --no-startup-id feh --bg-max --randomize ~/Pictures/Wallpapers/*
 
 # Pulse Audio controls
 #exec --no-startup-id pulseaudio
