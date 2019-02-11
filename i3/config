@@ -51,7 +51,7 @@ set $fileManager nemo
 set $fileManagerClass "Nemo"
 
 set $musicPlayer quodlibet
-set $musicPlayerClass "Quod Libet"
+set $musicPlayerClass "Quodlibet"
 
 set $emailClient thunderbird
 set $emailClientClass "Thunderbird"
