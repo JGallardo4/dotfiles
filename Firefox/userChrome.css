@@ -116,8 +116,8 @@ Delete this rule if you need a space to drag the window*/
 
 /* tab line - adjust color & size, default #0a84ff 2px */
 .tab-line {
-  background-color: #0a84ff !important;
-  height: 0px !important;
+  background-color: #ffcc66 !important;
+  height: 1px !important;
   }
 
 
@@ -168,7 +168,7 @@ browser[type="content-primary"], tabbrowser tabpanels, #appcontent > #content {
 }
 
 /*
- * Hide the back and forward buttons
+ * Hide the back button
  *
  * Contributor(s): Madis0, Timvde
  */
