@@ -1,6 +1,7 @@
 # Theme:       Breeze-gtk
 # Description: Breeze dark theme for GTK+2.0
 # Modified to fit Tomorrow-Eighties color scheme
+# This file goes in ~/.gtkrc-2.0.mine
 
 gtk-color-scheme = "text_color:#CCCCCC"
 gtk-color-scheme = "base_color:#2D2D2D"
