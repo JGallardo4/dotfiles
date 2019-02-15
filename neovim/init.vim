@@ -23,3 +23,9 @@ set mouse=c
 noremap h k
 noremap j h
 noremap k j
+
+" Enable auto-complete for html
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+
+" Easier access to autocomplete
+:imap <C-Space> <C-X><C-O>
