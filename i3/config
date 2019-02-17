@@ -58,8 +58,8 @@ set $emailClientClass "Thunderbird"
 
 set $taskManager xfce4-taskmanager
 
-set $terminal gnome-terminal
-set $terminalClass "Gnome Terminal"
+set $terminal urxvt
+set $terminalClass "URxvt"
 
 # Colors
 ## Base16 Tomorrow Night
@@ -264,7 +264,7 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Assigning apps to workspaces
-assign [class="musicPlayerClass"] $ws10
+assign [class=$musicPlayerClass] $ws10
 assign [class="Idea"] $ws2
 assign [class=$browserClass] $ws1
 assign [class="Transmission-gtk"] $ws10

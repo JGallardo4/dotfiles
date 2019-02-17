@@ -1,3 +1,12 @@
+// Add padding around terminal output
+VteTerminal,
+TerminalScreen,
 vte-terminal {
     padding: 55px;
+    -VteTerminal-inner-border: 55px;
+}
+
+// Remove window title from Client-Side Decorations
+.solid-csd headerbar .title {
+    font-size: 0;
 }
