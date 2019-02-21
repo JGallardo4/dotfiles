@@ -58,8 +58,8 @@ set $emailClientClass "Thunderbird"
 
 set $taskManager xfce4-taskmanager
 
-set $terminal urxvt
-set $terminalClass "URxvt"
+set $terminal kitty
+set $terminalClass "Kitty"
 
 # Colors
 ## Base16 Tomorrow Night
@@ -67,29 +67,60 @@ set $terminalClass "URxvt"
 ##
 ## You can use these variables anywhere in the i3 configuration file.
 
-set $base00 #2d2d2d
-set $base01 #393939
-set $base02 #515151
-set $base03 #747369
-set $base04 #a09f93
-set $base05 #d3d0c8
-set $base06 #e8e6df
-set $base07 #f2f0ec
-set $base08 #f2777a
-set $base09 #f99157
-set $base0A #ffcc66
-set $base0B #99cc99
-set $base0C #66cccc
-set $base0D #f99157
-set $base0E #cc99cc
-set $base0F #d27b53
+set $base00 #2d2d2d 
+# Dark dark grey
+
+set $base01 #393939 
+# Dark grey
+
+set $base02 #515151 
+# Light grey
+
+set $base03 #747369 
+# ?
+
+set $base04 #a09f93 
+# ?
+
+set $base05 #d3d0c8 
+# ?
+
+set $base06 #e8e6df 
+# ?
+
+set $base07 #f2f0ec 
+# ?
+
+set $base08 #f2777a 
+# Red
+
+set $base09 #f99157 
+# Orange
+
+set $base0A #ffcc66 
+# Yellow
+
+set $base0B #99cc99 
+# Green
+
+set $base0C #66cccc 
+# Aqua
+
+set $base0D #f99157 
+# Orange ??
+
+set $base0E #cc99cc 
+# Purple
+
+set $base0F #d27b53 
+# ?
 
 #################
 # Client Colors #
 #################
 
 # CLASS                 BORDER          BACKGROUND	TEXT            INDICATOR	CHILD_BORDER
-client.focused          $base05	        $base0D		$base00 	$base0D		$base0D	
+client.focused          $base05	        $base0D		$base00 	$base0D		$base0A	
 client.unfocused        $base01 	$base00		$base05		$base01		$base01
 client.focused_inactive $base01 	$base01     	$base05		$base03		$base01
 client.urgent           $base08		$base08       	$base00		$base08		$base08
@@ -226,9 +257,7 @@ bindsym $mod+Tab workspace back_and_forth
 
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1:" 
-#"1:Browser "
 set $ws2 "2:"
-#"2:Terminal "
 set $ws3 "3:"
 set $ws4 "4:"
 set $ws5 "5:"
@@ -237,7 +266,6 @@ set $ws7 "7:"
 set $ws8 "8:"
 set $ws9 "9:"
 set $ws10 "10:"
-#"10:Music "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -294,9 +322,9 @@ bar {
 		separator  $base04
 
 		# State			Border	BG	Text
-        	focused_workspace  	$base05 $base0B	$base00
+        	focused_workspace  	$base0A $base09	$base00
 		urgent_workspace   	$base08 $base08 $base00
-		inactive_workspace 	$base03 $base01 $base05
+		inactive_workspace 	$base00 $base01 $base05
 	}
 }
 

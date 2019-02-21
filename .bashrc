@@ -46,18 +46,6 @@ shopt -s checkwinsize
 echo -ne "Today is "; date
 echo "";
 
-# Change the window title of X terminals
-case ${TERM} in
-	xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|interix|konsole*)
-		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
-		;;
-	screen*)
-		PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
-		;;
-esac
-
-use_color=true
-
 # Set colorful PS1 only on colorful terminals.
 # dircolors --print-database uses its own built-in database
 # instead of using /etc/DIR_COLORS.  Try to use the external file
@@ -115,9 +103,7 @@ alias more=less
 alias c='clear'                                                    # clear the screen
 alias b='cd -'                                                     # move to the previous directory
 alias u='cd ..'                                                    # move up one directory
-alias Programs='cd /home/juan/Programs'			           # move to my linux practice folder                                    
 alias k='kill $!'                                                  # kill last process
-alias mp='mousepad'                                                # open mousepad
 alias install='sudo pacman -Syu'                                   # install a package
 alias makeC='gcc -o'                                               #easier way to compile C programs
 alias reinstall='sudo pacman -S'                                   #easier way to reinstall
@@ -181,9 +167,3 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 
 # TERM variable for Solarized
 export TERM=screen-256color-bce
-
-# Java CLASSPATH
-#export JAVA_HOME = /lib/jvm/java-11-openjdk
-#export CLASSPATH = .:/home/juan/Programs/Java
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
