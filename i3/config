@@ -293,11 +293,10 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Assigning apps to workspaces
 assign [class=$musicPlayerClass] $ws10
-assign [class="Idea"] $ws2
+assign [class="Apache NetBeans IDE 10.0"] $ws2
 assign [class=$browserClass] $ws1
 assign [class="Transmission-gtk"] $ws10
 assign [class="Nicotine"] $ws10
-#assign [class=$fileManagerClass] $ws9
 
 #######
 # Bar #
@@ -305,13 +304,13 @@ assign [class="Nicotine"] $ws10
 
 # Start i3bar to display a workspace bar (plus the system information i3status finds out, if available)
 bar {
-	# i3bar_command i3bar -t
+	mode hide # use mod key to show the bar
 	font pango:Iosevka Term SS04 Medium 12
 	height 27
 	bindsym button4 nop
 	bindsym button5 nop
-	# bindsym button1 nop # disable clicking on workspace buttons
-    	# position top
+	bindsym button1 nop # disable clicking on workspace buttons
+    	position top
 	status_command i3status
 	strip_workspace_numbers yes
 	binding_mode_indicator yes
@@ -324,7 +323,7 @@ bar {
 		# State			Border	BG	Text
         	focused_workspace  	$base0A $base09	$base00
 		urgent_workspace   	$base08 $base08 $base00
-		inactive_workspace 	$base00 $base01 $base05
+		inactive_workspace 	$base00 $base00 $base05
 	}
 }
 
