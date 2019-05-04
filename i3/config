@@ -58,8 +58,8 @@ set $emailClientClass "Thunderbird"
 
 set $taskManager xfce4-taskmanager
 
-set $terminal kitty
-set $terminalClass "Kitty"
+set $terminal termite
+set $terminalClass "Termite"
 
 # Colors
 ## Base16 Tomorrow Night
