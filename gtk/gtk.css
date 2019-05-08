@@ -6,6 +6,10 @@ vte-terminal {
     -VteTerminal-inner-border: 55px;
 }
 
+.termite {
+    padding: 55px;
+}
+
 // Remove window title from Client-Side Decorations
 .solid-csd headerbar .title {
     font-size: 0;
