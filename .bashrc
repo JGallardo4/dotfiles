@@ -14,6 +14,13 @@ alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
 
+# automatically show directory contents
+#       consider changing to different alias
+#       if working with a large directory
+cd() {
+ builtin cd "$@" && ls;
+}
+
 alias dir='pwd'	# Show current directory
 alias where='pwd'
 alias cp="cp -i"                                                   # confirm before overwriting something
@@ -73,9 +80,25 @@ bind "set completion-ignore-case on"
 bind "set completion-map-case on"
 bind "set show-all-if-ambiguous on"
 
+# Add color in manpages for less
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
+
 # faster navigation
 shopt -s autocd
 shopt -s dirspell
 shopt -s cdspell
+
+# enable true colors in neovim
+export NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+# javafx environment variables
+export PATH_TO_FX=/lib/jvm/javafx-sdk-11.0.2/lib
+
 # prompt
-export PS1="\u \w \\$ \[$(tput sgr0)\]"
+export PS1="\[\033[38;5;4m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \w \[$(tput sgr0)\]\[\033[38;5;208m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"

@@ -28,45 +28,54 @@ fullscreen = true
 cursor_blink = on
 
 [colors]
-# http://chriskempson.github.io/base16/#tomorrow
+# Base16 Eighties
+# Author: Chris Kempson (http://chriskempson.com)
 
-# special
-cursor = #d3d0c8  
-background = #2d2d2d
-foreground = #d3d0c8 
-foreground_bold = #d3d0c8 
+foreground          = #d3d0c8
+foreground_bold     = #e8e6df
+cursor              = #e8e6df
+cursor_foreground   = #2d2d2d
+background          = #3b3b3b 
 
-# black
-color0 = #2d2d2d #bg
-color8 = #747369 #red
+# 16 color space
 
-# red
-color1 = #f2777a #red
-color9 = #f2777a #comment
+# Black, Gray, Silver, White
+color0  = #2d2d2d
+color8  = #747369
+color7  = #d3d0c8
+color15 = #f2f0ec
 
-# green
-color2 = #99cc99 #green
-color10 = #99cc99 #green
+# Red
+color1  = #f2777a
+color9  = #f2777a
 
-# yellow
-color3 = #ffcc66 #yellow
-color11 = #ffcc66 #yellow
+# Green
+color2  = #99cc99
+color10 = #99cc99
 
-# blue
-color4 = #6699cc #blue
-color12 = #6699cc #blue
+# Yellow
+color3  = #ffcc66
+color11 = #ffcc66
 
-# magenta
-color5 = #cc99cc #purple
-color13 = #cc99cc #purple
+# Blue
+color4  = #6699cc
+color12 = #6699cc
 
-# cyan 
-color6 = #66cccc #aqua
-color14 = #66cccc #aqua
+# Purple
+color5  = #cc99cc
+color13 = #cc99cc
 
-# white
-color7 = #d3d0c8 #foreground
-color15 = #f2f0ec #white
+# Teal
+color6  = #66cccc
+color14 = #66cccc
+
+# Extra colors
+color16 = #f99157
+color17 = #d27b53
+color18 = #393939
+color19 = #515151
+color20 = #a09f93
+color21 = #e8e6df
 
 [hints]
 #font = Iosevka Nerd Font 18
