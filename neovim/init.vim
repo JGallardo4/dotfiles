@@ -1,3 +1,5 @@
+" Juan's
+
 "           ██                           
 "          ░░                            
 "  ██    ██ ██ ██████████  ██████  █████ 
@@ -17,12 +19,18 @@ set number
 syntax on
 
 " Enable mouse support.
-set mouse=c
+" set mouse=c
 
 " Change movement keys to make more sense in Colemak layout.
 noremap h k
 noremap j h
 noremap k j
+
+" Disable arrow keys
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 
 " Enable auto-complete for html
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags

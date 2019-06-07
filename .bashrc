@@ -102,3 +102,7 @@ export PATH_TO_FX=/lib/jvm/javafx-sdk-11.0.2/lib
 
 # prompt
 export PS1="\[\033[38;5;4m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \w \[$(tput sgr0)\]\[\033[38;5;208m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/juan/.sdkman"
+[[ -s "/home/juan/.sdkman/bin/sdkman-init.sh" ]] && source "/home/juan/.sdkman/bin/sdkman-init.sh"
