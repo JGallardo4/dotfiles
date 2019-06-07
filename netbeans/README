@@ -1,7 +1,0 @@
-Add:
-
--J-Dswing.aatext=true -J-Dawt.useSystemAAFontSettings=lcd
-
-to netbeans.config at the end of the netbeans_default_options string.
-
-You can find the config file in the $NETBEANS_HOME/etc/ folder (e.g. /home/<user_name>/<neatbeans_folder>/etc/netbeans.conf)
