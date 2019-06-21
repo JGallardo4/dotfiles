@@ -17,6 +17,3 @@ setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
 
 exec i3
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
-
-# Set wallpaper
-betterlockscreen

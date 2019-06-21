@@ -23,12 +23,12 @@
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
-font pango:FontAwesome, iosevka-term-ss04-medium 18
+font pango:FontAwesome, iosevka-term-ss04-medium 15
 
 # Constrain the size of floating windows
 # format: <variable> <width> x <height>
 floating_minimum_size 600 x 500
-floating_maximum_size 900 x 800
+floating_maximum_size 1200 x 1000
 
 ###########
 # i3-Gaps #
@@ -36,8 +36,8 @@ floating_maximum_size 900 x 800
 
 # Default gaps between windows
 #smart_gaps on
-gaps inner 7
-gaps outer 7
+gaps inner 10
+gaps outer 0
 
 # Border size 
 for_window [class="^.*"] border pixel 2
@@ -112,8 +112,8 @@ set $base0B #d6acd6
 #################
 
 # CLASS                 BORDER          BACKGROUND	TEXT            INDICATOR	CHILD_BORDER
-client.focused          $base07	        $base0B		$base00 	$base07		$base07	
-client.unfocused        $base00 	$base00		$base05		$base01		$base01
+client.focused          $base07	        $base00		$base07 	$base07		$base07	
+client.unfocused        $base01 	$base00		$base0B		$base01		$base01
 client.focused_inactive $base01 	$base01     	$base05		$base03		$base01
 client.urgent           $base05		$base08       	$base00		$base08		$base08
 client.background	$base00
@@ -187,7 +187,7 @@ bindsym $mod+f fullscreen toggle
 
 ## Change container layout (stacked, tabbed, toggle split)
 # bindsym $mod+s layout stacking
-# bindsym $mod+w layout tabbed
+bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -242,7 +242,7 @@ for_window [class="musicPlayer"] focus_on_window_activation none
 # Other individual window configurations
 for_window [class="Idea"] tiling enable
 for_window [class="Galculator"] floating enable resize set 400 500
-for_window [class=$terminalClass] move scratchpad
+# for_window [class=$terminalClass] move scratchpad
 
 ################
 ## Workspaces ##
@@ -296,6 +296,7 @@ assign [class="Apache NetBeans IDE 10.0"] $ws2
 assign [class=$browserClass] $ws1
 assign [class="Transmission-gtk"] $ws10
 assign [class="Nicotine"] $ws10
+assign [class="discord"] $ws10
 
 #######
 # Bar #
@@ -394,14 +395,11 @@ mode "$mode_gaps_outer" {
 # Autostart #
 #############
 
-# Cache an image to use as lockscreen and wallpaper
-# doesnt seem to be working! exec --no-startup-id betterlockscreen -u ~/.Pictures/Wallpapers
-
 # Pamac authentification stuff
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
 
 # Turn numlock off
-# No numberpad atm! 
+# No numberpad at the moment! 
 # exec_always --no-startup-id numlockx on
 
 # Pulse Audio controls
@@ -411,9 +409,6 @@ exec --no-startup-id pa-applet
 # Wireless manager applet
 exec --no-startup-id nm-applet
 
-# Torrents client
-exec --no-startup-id transmission
-
 # Software updates etc
 exec --no-startup-id pamac-tray
 
@@ -422,10 +417,6 @@ exec --no-startup-id pamac-tray
 
 # Set keyboard to International U.S. keyboard with Alt-r variant
 #setxkbmap rules evdev -model evdev -layout us -variant altgr-intl
-
-# Start a terminal in the scratchpad
-for_window [instance="_scratchpad"] move scratchpad 
-exec --no-startup-id $terminal -name _scratchpad
 
 ###################
 # Multimedia Keys #

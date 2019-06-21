@@ -19,7 +19,10 @@ set number
 syntax on
 
 " Enable mouse support.
-" set mouse=c
+set mouse=c
+
+" Use system clipboard
+set clipboard+=unnamedplus
 
 " Change movement keys to make more sense in Colemak layout.
 noremap h k
