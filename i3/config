@@ -321,9 +321,9 @@ bar {
 		separator  $base0A
 
 		# State			Border	BG	Text
-        	focused_workspace  	$base06 $base06	$base00
-		urgent_workspace   	$base07 $base07 $base06
-		inactive_workspace 	$base00 $base00 $base06
+        	focused_workspace  	$base07 $base07	$base00
+		urgent_workspace   	$base06 $base06 $base00
+		inactive_workspace 	$base00 $base00 $base07
 	}
 }
 

@@ -19,7 +19,7 @@ set number
 syntax on
 
 " Enable mouse support.
-set mouse=c
+set mouse=a
 
 " Use system clipboard
 set clipboard+=unnamedplus
@@ -43,3 +43,16 @@ imap <C-Space> <C-X><C-O>
 
 " Tab inserts 4 spaces
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+
+" Vim Plug "
+" Specify a directory for plugins
+call plug#begin('~/.dotfiles/nvim/plugins/')
+
+" Vim Surround
+Plug 'tpope/vim-surround'
+
+" C#
+Plug 'OrangeT/vim-csharp'
+
+" Initialize plugin system
+call plug#end()

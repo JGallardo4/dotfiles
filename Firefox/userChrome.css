@@ -12,6 +12,10 @@
 #toolbar-menubar {
   padding-top: 0px !important;
 }
+
+#TabsToolbar {
+    visibility: collapse;
+}
 /* End hide tabs bar */
 
 
@@ -28,3 +32,12 @@
   transform: rotate(180deg);
 }
     /* End Move sidebar header to the bottom */
+
+/** *
+ * Combat white flash
+ * */
+@-moz-document url("about:newtab") {
+    body { background-color: #011326 !important;}
+}
+
+browser { background-color: #011326 !important; }
