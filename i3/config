@@ -27,8 +27,8 @@ font pango:FontAwesome, iosevka-term-ss04-medium 15
 
 # Constrain the size of floating windows
 # format: <variable> <width> x <height>
-floating_minimum_size 600 x 500
-floating_maximum_size 1200 x 1000
+#floating_minimum_size 600 x 500
+#floating_maximum_size 1200 x 1000
 
 ###########
 # i3-Gaps #

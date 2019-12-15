@@ -30,10 +30,10 @@ noremap j h
 noremap k j
 
 " Disable arrow keys
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
+" noremap <Up> <Nop>
+" noremap <Down> <Nop>
+" noremap <Left> <Nop>
+" noremap <Right> <Nop>
 
 " Enable auto-complete for html
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
@@ -41,8 +41,8 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 " Easier access to autocomplete
 imap <C-Space> <C-X><C-O>
 
-" Tab inserts 4 spaces
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+" Hard tabs.
+set tabstop=2 shiftwidth=2
 
 " Vim Plug "
 " Specify a directory for plugins
